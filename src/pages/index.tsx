@@ -60,7 +60,7 @@ export default function Home(): ReactNode {
                         },
                         "url": "https://foxyface.jeka8833.pp.ua/",
                         "image": "https://foxyface.jeka8833.pp.ua/images/favicon-144x144.png",
-                        "downloadUrl": "https://github.com/Jeka8833/FoxyFace/wiki/Install-FoxyFace",
+                        "downloadUrl": "https://foxyface.jeka8833.pp.ua/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace",
                         "screenshot": "https://foxyface.jeka8833.pp.ua/images/mainPage/background.jpg",
                         "publisher": {
                             "@type": "Person",
@@ -129,8 +129,9 @@ export default function Home(): ReactNode {
                                     <Card.Text>The main app that tracks your face.</Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
-                                    <Button as="a" href="https://github.com/Jeka8833/FoxyFace/wiki/Install-FoxyFace"
-                                            rel="noopener noreferrer nofollow" target="_blank">See guide</Button>
+                                    <Button as="a"
+                                            href="/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace"
+                                            target="_blank">See guide</Button>
                                 </Card.Footer>
                             </Card>
                         </Col>
@@ -163,8 +164,8 @@ export default function Home(): ReactNode {
                                 </Card.Body>
                                 <Card.Footer>
                                     <Button as="a"
-                                            href="https://github.com/Jeka8833/FoxyFace/wiki/Install-Module-from-Module-Registry"
-                                            rel="noopener noreferrer nofollow" target="_blank">See guide</Button>
+                                            href="/docs/FoxyFaceVRCFTInterface/install-update-uninstall/install/Install-Module-from-Module-Registry"
+                                            target="_blank">See guide</Button>
                                 </Card.Footer>
                             </Card>
                         </Col>
@@ -190,8 +191,8 @@ export default function Home(): ReactNode {
                                 </Card.Body>
                                 <Card.Footer>
                                     <Button as="a"
-                                            href="https://github.com/Jeka8833/FoxyFace/wiki/Using-another-device-as-a-camera"
-                                            rel="noopener noreferrer nofollow" target="_blank">See guide</Button>
+                                            href="/docs/FoxyFace/connection/Using-another-device-as-a-camera"
+                                            target="_blank">See guide</Button>
                                 </Card.Footer>
                             </Card>
                         </Col>
@@ -226,8 +227,8 @@ export default function Home(): ReactNode {
                                 </Card.Body>
                                 <Card.Footer>
                                     <Button as="a"
-                                            href="https://github.com/Jeka8833/FoxyFace/wiki/Update-Babble-Model"
-                                            rel="noopener noreferrer nofollow" target="_blank">See guide</Button>
+                                            href="/docs/FoxyFace/ui/babble/Update-Babble-Model" target="_blank">See
+                                        guide</Button>
                                 </Card.Footer>
                             </Card>
                         </Col>
@@ -246,14 +247,11 @@ export default function Home(): ReactNode {
                                 The parameters of the tongue, cheeks or jaw may not track well. The solution to this
                                 may be:
                                 <ol>
-                                    <li><a href="https://github.com/Jeka8833/FoxyFace/wiki/Update-Babble-Model"
-                                           rel="noopener noreferrer nofollow" target="_blank">Update the neural network
+                                    <li><a href="/docs/FoxyFace/ui/babble/Update-Babble-Model">Update the neural network
                                         from Project Babble.</a></li>
-                                    <li><a href="https://github.com/Jeka8833/FoxyFace/wiki/Auto-Calibration"
-                                           rel="noopener noreferrer nofollow" target="_blank">Perform Auto
+                                    <li><a href="/docs/FoxyFace/ui/calibration/Auto-Calibration">Perform Auto
                                         Calibration.</a></li>
-                                    <li><a href="https://github.com/Jeka8833/FoxyFace/wiki/Camera-Settings"
-                                           rel="noopener noreferrer nofollow" target="_blank">Adjust camera settings and
+                                    <li><a href="/docs/FoxyFace/ui/camera/Camera-Settings">Adjust camera settings and
                                         tweak the environment (lighting, background, position, etc.).</a></li>
                                 </ol>
                                 <p>The main reason is the imperfection of neural networks. If you know other neural
@@ -295,14 +293,13 @@ export default function Home(): ReactNode {
                                     </li>
                                     <li>Run VRChat and select the OBS camera in VRChat.</li>
                                     <li>Run FoxyFace and change <a
-                                        href="https://github.com/Jeka8833/FoxyFace/wiki/Camera-Settings#camera-id"
-                                        rel="noopener noreferrer nofollow" target="_blank">Camera ID</a> in
+                                        href="/docs/FoxyFace/ui/camera/Camera-Settings#camera-id"
+                                        target="_blank">Camera ID</a> in
                                         FoxyFace.
                                     </li>
                                 </ol>
                                 <p>You can find more detailed instructions <a
-                                    href="https://github.com/Jeka8833/FoxyFace/wiki/Head-Rotation"
-                                    rel="noopener noreferrer nofollow" target="_blank">here</a>.</p>
+                                    href="/docs/FoxyFace/ui/vrcft/headrotation/Head-Rotation">here</a>.</p>
                             </Accordion.Body>
                         </Accordion.Item>
                         <Accordion.Item eventKey="2">
@@ -310,12 +307,8 @@ export default function Home(): ReactNode {
                                 Avatar head rotation doesn't work
                             </Accordion.Header>
                             <Accordion.Body>
-                                Instructions on how to track head rotation can be found <a
-                                href="https://github.com/Jeka8833/FoxyFace/wiki/Head-Rotation"
-                                rel="noopener noreferrer nofollow" target="_blank">here</a>. But the instructions may be
-                                too complicated for beginners if you don't want to spend money on <a
-                                href="https://wiki.vrchat.com/wiki/VRC%2B" rel="noopener noreferrer nofollow"
-                                target="_blank">VRC+</a>.
+                                This function will require additional actions from you during initial setup, see
+                                instructions <a href="/docs/FoxyFace/ui/vrcft/headrotation/Head-Rotation">here</a>.
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
@@ -339,8 +332,7 @@ export default function Home(): ReactNode {
                                     <Card.Title as="h3">Jeka8833</Card.Title>
                                     <hr/>
                                     <Card.Text as="div">
-                                        <p>Founder of FoxyFace, if you have any questions, feel free to ask them in the
-                                            FoxyFace repository or to me in Discord.</p>
+                                        <p>Founder of FoxyFace, if you have any questions, feel free to ask them.</p>
                                         <div className="mt-auto">
                                             <ListGroup variant="flush">
                                                 <ListGroup.Item>
@@ -390,20 +382,8 @@ export default function Home(): ReactNode {
                         <li>Map: <a
                             href="https://vrchat.com/home/world/wrld_cf2e8fe9-5979-4ad9-8c0e-d7fe22e09073/info"
                             rel="noopener noreferrer nofollow" target="_blank">Far beyond the horizon</a></li>
-                        <li>Avatar: <a href="https://omatssu.gumroad.com/l/amriot"
-                                       rel="noopener noreferrer nofollow" target="_blank">Amriot</a></li>
-                        <li>Avatar modules:
-                            <ul>
-                                <li><a href="https://adjerry91.github.io/VRCFaceTracking-Templates"
-                                       rel="noopener noreferrer nofollow" target="_blank">VRCFT - Jerry's
-                                    Templates</a> - Allows you to control the "muscles" on the avatar's face.
-                                </li>
-                                <li><a href="https://github.com/kusomaigo/DeskyMode"
-                                       rel="noopener noreferrer nofollow" target="_blank">DeskyMode</a> - Allows
-                                    you to control the rotation of the avatar's head.
-                                </li>
-                            </ul>
-                        </li>
+                        <li> Avatar: <a href="https://vrchat.com/home/avatar/avtr_7b217580-e724-452f-8dca-7778738450cc"
+                                        rel="noopener noreferrer nofollow" target="_blank">Amriot</a></li>
                     </ul>
                 </Modal.Body>
             </Modal>

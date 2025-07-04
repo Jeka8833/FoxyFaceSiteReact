@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
     title: 'FoxyFace',
     tagline: 'An application that allows you to control your avatar\'s face in VRChat using your real face.',
-    favicon: 'img/logo.png',
+    favicon: 'images/general/logo.png',
 
     // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
     future: {
@@ -27,6 +27,8 @@ const config: Config = {
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'throw',
+    onBrokenAnchors: 'throw',
+    onDuplicateRoutes: 'throw',
 
     // Even if you don't use internationalization, you can use this field to set
     // useful metadata like html lang. For example, if your site is Chinese, you
@@ -45,19 +47,16 @@ const config: Config = {
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                        'https://github.com/Jeka8833/FoxyFaceSiteReact/tree/master',
                 },
                 blog: false,
-                theme: {
-                    customCss: './src/css/custom.css',
-                },
             } satisfies Preset.Options,
         ],
     ],
 
     themeConfig: {
         // Replace with your project's social card
-        image: 'img/logo.png',
+        image: 'images/general/logo.png',
         colorMode: {
             defaultMode: 'dark', // This sets the default mode to dark
             disableSwitch: false, // Set to true if you want to disable the light/dark mode switch in the navbar
@@ -67,7 +66,7 @@ const config: Config = {
             title: 'FoxyFace',
             logo: {
                 alt: 'FoxyFace Logo',
-                src: 'img/logo.png',
+                src: 'images/general/logo.png',
             },
             items: [
                 {
@@ -88,11 +87,11 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
+                    title: 'Additional Docs',
                     items: [
                         {
-                            label: 'Documentation',
-                            to: '/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace',
+                            label: 'Documentation on GitHub',
+                            href: 'https://github.com/Jeka8833/FoxyFace/wiki',
                         },
                     ],
                 },
@@ -100,16 +99,8 @@ const config: Config = {
                     title: 'Contact',
                     items: [
                         {
-                            label: 'GitHub Issues/Discussions',
-                            href: 'https://github.com/Jeka8833/FoxyFace',
-                        },
-                        {
-                            label: 'Discord',
-                            href: 'https://discordapp.com/invite/docusaurus',
-                        },
-                        {
-                            label: 'Mail',
-                            href: 'mailto:mail@foxyface@jeka8833.pp.ua',
+                            label: 'Here all information',
+                            to: 'https://foxyface.jeka8833.pp.ua/#contact',
                         },
                     ],
                 },
@@ -122,7 +113,7 @@ const config: Config = {
                         },
                         {
                             label: 'Website GitHub',
-                            href: 'https://github.com/Jeka8833/FoxyFace',
+                            href: 'https://github.com/Jeka8833/FoxyFaceSiteReact',
                         },
                     ],
                 },
