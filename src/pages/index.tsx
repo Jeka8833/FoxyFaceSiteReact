@@ -61,7 +61,7 @@ export default function Home(): ReactNode {
                         "url": "https://foxyface.jeka8833.pp.ua/",
                         "image": "https://foxyface.jeka8833.pp.ua/images/favicon-144x144.png",
                         "downloadUrl": "https://foxyface.jeka8833.pp.ua/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace",
-                        "screenshot": "https://foxyface.jeka8833.pp.ua/images/mainPage/background.jpg",
+                        "screenshot": "https://foxyface.jeka8833.pp.ua/images/MainPage/background.jpg",
                         "publisher": {
                             "@type": "Person",
                             "name": "Jeka8833",
@@ -75,7 +75,7 @@ export default function Home(): ReactNode {
 
             <div style={{background: 'rgba(0, 0, 0, 1)'}}>
                 <Image alt="Background" className="position-absolute object-fit-cover opacity-75 w-100 vh-100 z-2"
-                       loading="lazy" src={imageUrl('images/mainPage/background.jpg')} fluid/>
+                       loading="lazy" src={imageUrl('images/MainPage/background.jpg')} fluid/>
 
                 <div className="position-absolute d-flex align-items-end justify-content-end w-100 vh-100 z-3">
                     <Button variant="link" onClick={() => setShowImageInfoModal(true)}>
@@ -324,7 +324,7 @@ export default function Home(): ReactNode {
                                     alt="Jeka8833 Avatar"
                                     className="mx-auto"
                                     loading="lazy"
-                                    src={imageUrl('images/mainPage/Jeka8833-avatar.jpg')}
+                                    src={imageUrl('images/MainPage/Jeka8833-avatar.jpg')}
                                     style={{maxWidth: '150px', aspectRatio: '1 / 1'}}
                                     roundedCircle
                                 />
