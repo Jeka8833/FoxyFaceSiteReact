@@ -87,7 +87,7 @@ export default function Home(): ReactNode {
                     <header className="mb-auto">
                         <div className="float-md-start mb-0 pt-3">
                             <a className="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bold py-1 px-2"
-                               href="/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace">
+                               href="/docs/FirstSetup/">
                                 Documentation
                             </a>
                             <a className="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bold py-1 px-2"

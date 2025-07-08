@@ -17,6 +17,10 @@ const sidebars: SidebarsConfig = {
         {
             type: 'category',
             label: 'Installation and First Setup',
+            link: {
+                type: 'doc',
+                id: 'FirstSetup/FirstSetup',
+            },
             items: [
                 {
                     type: 'category',
