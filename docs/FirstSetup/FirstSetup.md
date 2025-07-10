@@ -34,11 +34,13 @@ module.
    found [here](/FoxyFace/install-update-uninstall/install/Install-FoxyFace.md).
 2. Install and launch the VRCFaceTracking application; the download link
    is [here](https://store.steampowered.com/app/3329480/VRCFaceTracking/).
-3. If you plan to use the DeskyMode module for head rotation, you might need to install a different version of the
-   application. You can find more information [here](/FoxyFace/ui/vrcft/headrotation/Head-Rotation.md).
-4. Install the FoxyFaceVRCFTInterface module; instructions can be
+
+> If you plan to use the DeskyMode module for head rotation, you might need to install a different version of the
+> application. You can find more information [here](/FoxyFace/ui/vrcft/headrotation/Head-Rotation.md).
+
+3. Install the FoxyFaceVRCFTInterface module; instructions can be
    found [here](/FoxyFaceVRCFTInterface/install-update-uninstall/install/Install-Module-from-Module-Registry.md).
-5. Update the neural network from Project Babble; instructions can be
+4. Update the neural network from Project Babble; instructions can be
    found [here](/FoxyFace/ui/babble/Update-Babble-Model.md).
 
 ## Improving tracking quality
