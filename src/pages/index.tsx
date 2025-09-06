@@ -75,9 +75,9 @@ export default function Home(): ReactNode {
 
             <div style={{background: 'rgba(0, 0, 0, 1)'}}>
                 <Image alt="Background" className="position-absolute object-fit-cover opacity-75 w-100 vh-100 z-2"
-                       loading="lazy" src={imageUrl('images/MainPage/background.jpg')} fluid/>
+                       loading="lazy" src={imageUrl('images/MainPage/background.jpg')} fluid style={{pointerEvents: 'none'}}/>
 
-                <div className="position-absolute d-flex align-items-end justify-content-end w-100 vh-100 z-3">
+                <div className="position-absolute bottom-0 end-0 p-2" style={{zIndex: 1040, pointerEvents: 'auto'}}>
                     <Button variant="link" onClick={() => setShowImageInfoModal(true)}>
                         Image info
                     </Button>

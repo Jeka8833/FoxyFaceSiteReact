@@ -43,6 +43,14 @@ Do not forget to install the [FoxyFaceVRCFTInterface](/FoxyFaceVRCFTInterface/in
 
 This is most likely to happen because your system does not have the necessary libraries. See what is missing in your system and install it.
 
+<br/>
+
+## For the gods of Arch Linux
+
+It's possible that FoxyFace doesn't install on Arch Linux, the reason is currently unknown, but some solution was found by one very good person. You can read about it [here](https://github.com/Jeka8833/FoxyFace/issues/6).
+
+<br/>
+
 ## The program does not start
 
 The program should have created a file "latest.log", this file will be needed when you want to report a bug on GitHub Issues or Discord \#Jeka8833. 

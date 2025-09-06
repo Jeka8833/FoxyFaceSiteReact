@@ -18,6 +18,17 @@ Do not forget to install the [FoxyFaceVRCFTInterface](/FoxyFaceVRCFTInterface/in
 
 <br/>
 
+## Error 0xc06d007e or similar
+![FoxyFaceCrash](/images/FoxyFace/install-update-uninstall/install/FoxyFaceCrash.png)<br />
+
+This error is most likely related to the fact that you are using an **outdated version of Windows** (all versions below **Windows 10**.0.19041 (**20H1**) are considered outdated). To solve this problem, there is a version of FoxyFace called FoxyFace-CPU-Only. It will not use your graphics card's hardware acceleration but will instead use your CPU, which can put a very heavy load on your computer if it is not powerful enough.
+
+To run FoxyFace on an outdated Windows version, follow these steps:
+1. Download the "FoxyFace-CPU-Only.zip" archive from [here](https://github.com/Jeka8833/FoxyFace/releases/latest).<br />![FoxyFaceCpuOnly](/images/FoxyFace/install-update-uninstall/install/FoxyFaceCpuOnly.png)<br /><br />
+2. Follow steps 2-4 from the guide above.
+
+<br/>
+
 ## The program does not start
 
 The program should have created a file "latest.log", this file will be needed when you want to report a bug on GitHub Issues or Discord \#Jeka8833. 
