@@ -27,9 +27,42 @@ source venv/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+
+Now you need to find out what video card you have:
+<details>
+  <summary>Nvidia (Example for CUDA > 12.6 and cuDNN > 8)</summary>
+
+  Here is an example for CUDA version 12.6 and newer:
+  ```bash
+  pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+  ```
+  ```bash
+  pip install onnxruntime-gpu
+  ```
+</details>
+
+<details>
+  <summary>AMD</summary>
+
+  You need to find out the version of your ROCm and then change the numbers in the link; a list of available versions can be found [here](https://repo.radeon.com/rocm/manylinux/). Here's the command for ROCm version 6.4.3:
+  ```bash
+  pip install onnxruntime-rocm -f https://repo.radeon.com/rocm/manylinux/rocm-rel-6.4.3/
+  ```
+</details>
+
+<details>
+  <summary>No GPU or Intel</summary>
+
+  In this case, you don't have many options; all calculations will be performed on the CPU. Here is the command that you need to execute:
+  ```bash
+  pip install onnxruntime
+  ```
+</details>
+
 ```bash
 python Main.py
 ```
+
 
 :::info
 
