@@ -1,20 +1,7 @@
 import React, {ReactNode, useState} from 'react';
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import {
-    Accordion,
-    Alert,
-    Badge,
-    Button,
-    Card,
-    Col,
-    Container,
-    Image,
-    ListGroup,
-    Modal,
-    Nav,
-    Row
-} from 'react-bootstrap';
+import {Accordion, Badge, Button, Card, Col, Container, Image, ListGroup, Modal, Nav, Row} from 'react-bootstrap';
 
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
@@ -75,7 +62,8 @@ export default function Home(): ReactNode {
 
             <div style={{background: 'rgba(0, 0, 0, 1)'}}>
                 <Image alt="Background" className="position-absolute object-fit-cover opacity-75 w-100 vh-100 z-2"
-                       loading="lazy" src={imageUrl('images/MainPage/background.jpg')} fluid style={{pointerEvents: 'none'}}/>
+                       loading="lazy" src={imageUrl('images/MainPage/background.jpg')} fluid
+                       style={{pointerEvents: 'none'}}/>
 
                 <div className="position-absolute bottom-0 end-0 p-2" style={{zIndex: 1040, pointerEvents: 'auto'}}>
                     <Button variant="link" onClick={() => setShowImageInfoModal(true)}>
@@ -175,7 +163,7 @@ export default function Home(): ReactNode {
                 <div className="py-5" id="after-installation">
                     <h2 className="text-center">After Installation</h2>
                     <hr/>
-                    <Row xs={1} md={2} lg={3} className="g-4 pt-5 text-center">
+                    <Row xs={1} md={2} lg={3} className="g-4 pt-5 text-center justify-content-center">
                         <Col>
                             <Card className="h-100 border shadow-lg">
                                 <Card.Body>
@@ -232,6 +220,25 @@ export default function Home(): ReactNode {
                                 </Card.Footer>
                             </Card>
                         </Col>
+                        <Col>
+                            <Card className="h-100 border shadow-lg">
+                                <Card.Body>
+                                    <Card.Title as="h3">Setup Head & Hand Tracking</Card.Title>
+                                    <Card.Subtitle className="mb-2 text-body-secondary">
+                                        <Badge bg="primary" className="m-1">Step 4</Badge>
+                                    </Card.Subtitle>
+                                    <hr/>
+                                    <Card.Text>Set up Selfie Expression to track head rotation, torso, and hand. There
+                                        are also embedded modules in the avatar if, for some reason, you cannot use
+                                        Selfie Expression.</Card.Text>
+                                </Card.Body>
+                                <Card.Footer>
+                                    <Button as="a"
+                                            href="/docs/FoxyFace/ui/vrcft/headrotation/Head-Rotation" target="_blank">See
+                                        guide</Button>
+                                </Card.Footer>
+                            </Card>
+                        </Col>
                     </Row>
                 </div>
 
@@ -260,55 +267,12 @@ export default function Home(): ReactNode {
                         </Accordion.Item>
                         <Accordion.Item eventKey="1">
                             <Accordion.Header>
-                                Can FoxyFace work with Selfie Expression?
+                                Connecting to other programs for VTube
                             </Accordion.Header>
                             <Accordion.Body>
-                                <Alert variant="info">
-                                    <Alert.Heading as="h4">NOTE</Alert.Heading>
-                                    <p>The main problem is that one camera can be used by only one application (the
-                                        camera in most cases cannot split the video stream between two applications).
-                                        These instructions will help you split a video stream into two
-                                        applications.</p>
-                                    <p>The author does not have a VRC+ so the instructions may contain mistakes or
-                                        inaccuracies.</p>
-                                </Alert>
-                                Here's a rough guide on how to get FoxyFace and Selfie Expression working
-                                simultaneously:
-                                <ol>
-                                    <li><a href="https://obsproject.com/" rel="noopener noreferrer nofollow"
-                                           target="_blank">Install OBS application</a>. Video instructions can be found
-                                        <a href="https://www.youtube.com/watch?v=QGxdTGhhJyI"
-                                           rel="noopener noreferrer nofollow" target="_blank">here</a>, but you don't
-                                        need to create any scenes, just install the app.
-                                    </li>
-                                    <li>Close VRChat and FoxyFace applications.</li>
-                                    <li>Add a camera to the OBS scene. Video instructions can be found <a
-                                        href="https://www.youtube.com/watch?v=vLN29GPp4Ig"
-                                        rel="noopener noreferrer nofollow" target="_blank">here</a>.
-                                    </li>
-                                    <li>Click on the Start Virtual Camera button, <a
-                                        href="https://obsproject.com/kb/virtual-camera-guide"
-                                        rel="noopener noreferrer nofollow" target="_blank">here</a> are instructions on
-                                        how to do it.
-                                    </li>
-                                    <li>Run VRChat and select the OBS camera in VRChat.</li>
-                                    <li>Run FoxyFace and change <a
-                                        href="/docs/FoxyFace/ui/camera/Camera-Settings#camera-id"
-                                        target="_blank">Camera ID</a> in
-                                        FoxyFace.
-                                    </li>
-                                </ol>
-                                <p>You can find more detailed instructions <a
-                                    href="/docs/FoxyFace/ui/vrcft/headrotation/Head-Rotation">here</a>.</p>
-                            </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey="2">
-                            <Accordion.Header>
-                                Avatar head rotation doesn't work
-                            </Accordion.Header>
-                            <Accordion.Body>
-                                This function will require additional actions from you during initial setup, see
-                                instructions <a href="/docs/FoxyFace/ui/vrcft/headrotation/Head-Rotation">here</a>.
+                                You can't do this directly, see <a
+                                href="https://github.com/Jeka8833/FoxyFace/discussions/4" rel="noopener noreferrer"
+                                target="_blank">this post</a>.
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>
