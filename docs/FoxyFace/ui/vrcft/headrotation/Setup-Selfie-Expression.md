@@ -4,18 +4,20 @@ title: Setup Selfie Expression
 
 # Setup Selfie Expression
 
-:::tip
-
-At the time of writing this article, this feature is available for free in the beta version of VRChat, so you will need
-to select the **open beta of VRChat in Steam settings**.
-[Here's how to do it.](https://help.vrchat.com/hc/en-us/articles/360062658933-How-do-I-use-the-VRChat-Open-Beta)
-
-:::
-
 :::info
 
 The main problem is that one camera can be used by only one application (the camera in most cases cannot split the video
 stream between two applications). These instructions will help you split a video stream into two applications.
+
+:::
+
+:::tip
+
+If you are on Windows 11 Build 26100.3323 or later, released in February 2025, you have access to a built-in method for sharing a camera between multiple applications.
+
+To enable this feature, go to **Settings** => **Bluetooth & devices** => **Cameras** => Select the correct camera => **Advanced Camera Options** => **Enable "Allow multiple apps to use camera at the same time"** => **Apply**.
+
+Now you can set the same camera for FoxyFace and Selfie Expression.
 
 :::
 
