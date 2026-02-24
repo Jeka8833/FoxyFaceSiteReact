@@ -13,11 +13,11 @@ This instruction requires you to be skilled in adding modules to avatars. Though
 To track head rotation, follow these steps:
 1. [Install DeskyMode module.](https://github.com/kusomaigo/DeskyMode)
 2. [Install the most recent version of VRCFT.](https://download.foxyface.jeka8833.pp.ua/VRCFaceTracking.zip) (The version from the Steam Store is not suitable)
-:::danger[IMPORTANT]
+:::danger[Step 2 is IMPORTANT!]
 
-> Be sure to use [VRCFaceTracking Avalonia](https://github.com/dfgHiatus/VRCFaceTracking.Avalonia/releases/tag/v1.1.0.0) or an already compiled version of the [VRCFT master branch](https://github.com/benaclejames/VRCFaceTracking) from GitHub! The Steam version has [bug](https://github.com/benaclejames/VRCFaceTracking/issues/327) and therefore does not send information about head rotation!
-> 
-> To install compiled version, unzip and read the "Installation instructions, read me.txt" file.
+Be sure to use [VRCFaceTracking Avalonia](https://github.com/dfgHiatus/VRCFaceTracking.Avalonia/releases/tag/v1.1.0.0) or an already compiled version of the [VRCFT master branch](https://github.com/benaclejames/VRCFaceTracking) from GitHub! The Steam version has [bug](https://github.com/benaclejames/VRCFaceTracking/issues/327) and therefore does not send information about head rotation!
+
+To install compiled version, unzip and read the "Installation instructions, read me.txt" file.
 
 :::
 
