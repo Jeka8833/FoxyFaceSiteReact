@@ -2,6 +2,12 @@
 title: Install FoxyFace Windows
 ---
 
+:::note
+
+Don't forget that after installing FoxyFace, you need to install VRCFaceTracking from [Steam Store](https://store.steampowered.com/app/3329480/VRCFaceTracking/) or a [compiled version](https://download.foxyface.jeka8833.pp.ua/VRCFaceTracking.zip) from the FoxyFace developer.
+
+:::
+
 # Install FoxyFace Windows
 
 To install the FoxyFace program, follow these steps in order:

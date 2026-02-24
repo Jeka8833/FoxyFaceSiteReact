@@ -2,6 +2,11 @@
 title: Install FoxyFace Linux
 ---
 
+:::note
+
+Don't forget that after installing FoxyFace, you need to install [VRCFaceTracking Avalonia](https://github.com/dfgHiatus/VRCFaceTracking.Avalonia/releases/tag/v1.1.0.0), as the official VRCFaceTracking Steam program will **NOT** run on Linux or MacOS!
+:::
+
 # Install FoxyFace Linux
 
 Compiling on Linux is not a thankless task, so you'll have to work in the terminal. The whole idea is to install libraries and run a Python application, if you know simple methods on how to do that, I won't restrict you.

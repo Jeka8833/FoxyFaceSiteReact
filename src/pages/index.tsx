@@ -1,7 +1,22 @@
-import React, {ReactNode, useState} from 'react';
+import React, {ReactNode, useEffect, useState} from 'react';
 
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import {Accordion, Badge, Button, Card, Col, Container, Image, ListGroup, Modal, Nav, Row} from 'react-bootstrap';
+import {
+    Accordion,
+    Badge,
+    Button,
+    ButtonGroup,
+    Card,
+    Col,
+    Container,
+    Dropdown,
+    Image,
+    ListGroup,
+    Modal,
+    Nav,
+    Row
+} from 'react-bootstrap';
+import {isMacOs, osName} from 'react-device-detect';
 
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
@@ -12,6 +27,13 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import NavbarColorModeToggle from "@theme/Navbar/ColorModeToggle";
 import {registerListener} from "../util/DocusaurusBootstrapThemeSync";
 
+const VRCFT_WINDOWS_LINK = "https://store.steampowered.com/app/3329480/VRCFaceTracking/";
+const VRCFT_MAC_LINUX_LINK = "https://github.com/dfgHiatus/VRCFaceTracking.Avalonia/releases/tag/v1.1.0.0";
+
+const FOXYFACE_WINDOWS_LINK = "/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace-Windows";
+const FOXYFACE_MAC_LINK = "/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace-macOS";
+const FOXYFACE_LINUX_LINK = "/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace-Linux";
+
 export default function Home(): ReactNode {
     const {siteConfig} = useDocusaurusContext();
     const imageUrl = (path) => useBaseUrl(path);
@@ -20,6 +42,26 @@ export default function Home(): ReactNode {
 
     const [showImageInfoModal, setShowImageInfoModal] = useState(false);
     const [showVRChatSetupModal, setShowVRChatSetupModal] = useState(false);
+
+    const [vrcftLink, setVrcftLink] = useState(VRCFT_WINDOWS_LINK);
+    const [vrcftOS, setVrcftOS] = useState("Windows");
+
+    const [foxyFaceLink, setFoxyFaceLink] = useState(FOXYFACE_WINDOWS_LINK);
+    const [foxyFaceOS, setFoxyFaceOS] = useState("Windows");
+
+    useEffect(() => {
+        if (isMacOs) {
+            setVrcftLink(VRCFT_MAC_LINUX_LINK);
+            setVrcftOS("macOS");
+            setFoxyFaceLink(FOXYFACE_MAC_LINK);
+            setFoxyFaceOS("macOS");
+        } else if (osName === "Linux") {
+            setVrcftLink(VRCFT_MAC_LINUX_LINK);
+            setVrcftOS("Linux");
+            setFoxyFaceLink(FOXYFACE_LINUX_LINK);
+            setFoxyFaceOS("Linux");
+        }
+    }, []);
 
     return (
         <Layout
@@ -57,7 +99,7 @@ export default function Home(): ReactNode {
                     })}
                 </script>
 
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"/>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"/>
             </Head>
 
             <div style={{background: 'rgba(0, 0, 0, 1)'}}>
@@ -117,9 +159,32 @@ export default function Home(): ReactNode {
                                     <Card.Text>The main app that tracks your face.</Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
-                                    <Button as="a"
-                                            href="/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace"
-                                            target="_blank">See guide</Button>
+                                    <Dropdown as={ButtonGroup}>
+                                        <Button as="a" href={foxyFaceLink} variant="primary" target="_blank">
+                                            See guide for {foxyFaceOS}
+                                        </Button>
+                                        <Dropdown.Toggle split variant="primary" id="dropdown-foxyface-os-override"/>
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item onClick={() => {
+                                                setFoxyFaceLink(FOXYFACE_WINDOWS_LINK);
+                                                setFoxyFaceOS("Windows");
+                                            }}>
+                                                Windows
+                                            </Dropdown.Item>
+                                            <Dropdown.Item onClick={() => {
+                                                setFoxyFaceLink(FOXYFACE_MAC_LINK);
+                                                setFoxyFaceOS("macOS");
+                                            }}>
+                                                macOS
+                                            </Dropdown.Item>
+                                            <Dropdown.Item onClick={() => {
+                                                setFoxyFaceLink(FOXYFACE_LINUX_LINK);
+                                                setFoxyFaceOS("Linux");
+                                            }}>
+                                                Linux
+                                            </Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
                                 </Card.Footer>
                             </Card>
                         </Col>
@@ -134,8 +199,33 @@ export default function Home(): ReactNode {
                                     <Card.Text>This application sends avatar control commands to VRChat.</Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
-                                    <Button as="a" href="https://store.steampowered.com/app/3329480/VRCFaceTracking/"
-                                            rel="noopener noreferrer nofollow" target="_blank">Download</Button>
+                                    <Dropdown as={ButtonGroup}>
+                                        <Button as="a" href={vrcftLink} variant="primary"
+                                                rel="noopener noreferrer nofollow" target="_blank">
+                                            Download for {vrcftOS}
+                                        </Button>
+                                        <Dropdown.Toggle split variant="primary" id="dropdown-vrcft-os-override"/>
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item onClick={() => {
+                                                setVrcftLink(VRCFT_WINDOWS_LINK);
+                                                setVrcftOS("Windows");
+                                            }}>
+                                                Windows
+                                            </Dropdown.Item>
+                                            <Dropdown.Item onClick={() => {
+                                                setVrcftLink(VRCFT_MAC_LINUX_LINK);
+                                                setVrcftOS("macOS");
+                                            }}>
+                                                macOS
+                                            </Dropdown.Item>
+                                            <Dropdown.Item onClick={() => {
+                                                setVrcftLink(VRCFT_MAC_LINUX_LINK);
+                                                setVrcftOS("Linux");
+                                            }}>
+                                                Linux
+                                            </Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
                                 </Card.Footer>
                             </Card>
                         </Col>

@@ -25,19 +25,24 @@ title: Installation and First Setup
 
 :::info
 
-The installation order is important because the FoxyFace application must be launched before the FoxyFaceVRCFTInterface
+The installation order is important because the FoxyFace program must be launched before the FoxyFaceVRCFTInterface
 module.
 
 :::
 
-1. Install and launch the FoxyFace application; instructions can be
+1. Install and launch the FoxyFace program; instructions can be
    found [here](/FoxyFace/install-update-uninstall/install/Install-FoxyFace.md).
-2. Install and launch the VRCFaceTracking application; the download link
-   is [here](https://store.steampowered.com/app/3329480/VRCFaceTracking/).
+2. Install and launch VRCFaceTracking program
 
-> If you plan to use the DeskyMode module for head rotation, you might need to install a different version of the
-> application. You can find more information [here](/FoxyFace/ui/vrcft/headrotation/Head-Rotation.md).
+   Download the version corresponding to your operating system:
+   * **Windows:** [Steam Store](https://store.steampowered.com/app/3329480/VRCFaceTracking/)
+   * **Linux / MacOS:** [GitHub Releases](https://github.com/dfgHiatus/VRCFaceTracking.Avalonia/releases/tag/v1.1.0.0)
 
+   :::warning DeskyMode Users
+
+   If you plan to use the **DeskyMode** module for head rotation and you are on **Windows**, you may need a specific version of the application. Please [check the Head Rotation guide](/FoxyFace/ui/vrcft/headrotation/Head-Rotation.md) before proceeding.
+   
+   :::
 3. Install the FoxyFaceVRCFTInterface module; instructions can be
    found [here](/FoxyFaceVRCFTInterface/install-update-uninstall/install/Install-Module-from-Module-Registry.md).
 4. Update the neural network from Project Babble; instructions can be
