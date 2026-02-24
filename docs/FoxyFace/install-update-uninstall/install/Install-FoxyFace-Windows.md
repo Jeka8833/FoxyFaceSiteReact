@@ -2,23 +2,21 @@
 title: Install FoxyFace Windows
 ---
 
-:::note
-
-Don't forget that after installing FoxyFace, you need to install VRCFaceTracking from [Steam Store](https://store.steampowered.com/app/3329480/VRCFaceTracking/) or a [compiled version](https://download.foxyface.jeka8833.pp.ua/VRCFaceTracking.zip) from the FoxyFace developer.
-
-:::
-
 # Install FoxyFace Windows
 
 To install the FoxyFace program, follow these steps in order:
 1. Download "FoxyFace.zip" archive from [here](https://github.com/Jeka8833/FoxyFace/releases/latest).<br />![DownloadFoxyFace](/images/FoxyFace/install-update-uninstall/install/DownloadFoxyFace.png)<br /><br />
-2.  [Unzip](https://www.youtube.com/watch?v=r9hpiyzOOTY) the archive downloaded in *step 1* into any folder from which you feel comfortable running the program. The final result should look like this:<br />![UnzipedFoxyFaceResult](/images/FoxyFace/install-update-uninstall/install/UnzipedFoxyFaceResult.png)<br /><br />
+2. [Unzip](https://www.youtube.com/watch?v=r9hpiyzOOTY) the archive downloaded in *step 1* into any folder from which you feel comfortable running the program. The final result should look like this:<br />![UnzipedFoxyFaceResult](/images/FoxyFace/install-update-uninstall/install/UnzipedFoxyFaceResult.png)<br /><br />
 3. Run the FoxyFace program.<br />![RunFoxyFace](/images/FoxyFace/install-update-uninstall/install/RunFoxyFace.png)<br /><br />
 4. After waiting for a while you will see the following window, this means that you have successfully installed the program and run it:<br />![FoxyFaceMainScreen](/images/FoxyFace/install-update-uninstall/install/FoxyFaceMainScreen.png)<br /><br />
 
+<br/>
+
 :::info
 
-Do not forget to install the [FoxyFaceVRCFTInterface](/FoxyFaceVRCFTInterface/install-update-uninstall/install/Install-Module.md) module after you install the FoxyFace program.
+If the installation was successful, don't forget to follow these steps:
+1. Install VRCFaceTracking from [Steam Store](https://store.steampowered.com/app/3329480/VRCFaceTracking/) or a [compiled version](https://download.foxyface.jeka8833.pp.ua/VRCFaceTracking.zip) from the FoxyFace developer.
+2. Install the Interface Module: Follow the guide for the [FoxyFaceVRCFTInterface](/FoxyFaceVRCFTInterface/install-update-uninstall/install/Install-Module.md).
 
 :::
 
