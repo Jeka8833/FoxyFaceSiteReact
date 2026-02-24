@@ -29,6 +29,7 @@ import {registerListener} from "../util/DocusaurusBootstrapThemeSync";
 
 const VRCFT_WINDOWS_LINK = "https://store.steampowered.com/app/3329480/VRCFaceTracking/";
 const VRCFT_MAC_LINUX_LINK = "https://github.com/dfgHiatus/VRCFaceTracking.Avalonia/releases/tag/v1.1.0.0";
+const VRCFT_DESKYMODE_LINK = "https://download.foxyface.jeka8833.pp.ua/VRCFaceTracking.zip";
 
 const FOXYFACE_WINDOWS_LINK = "/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace-Windows";
 const FOXYFACE_MAC_LINK = "/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace-macOS";
@@ -223,6 +224,13 @@ export default function Home(): ReactNode {
                                                 setVrcftOS("Linux");
                                             }}>
                                                 Linux
+                                            </Dropdown.Item>
+                                            <Dropdown.Divider/>
+                                            <Dropdown.Item onClick={() => {
+                                                setVrcftLink(VRCFT_DESKYMODE_LINK);
+                                                setVrcftOS("Windows (DeskyMode fix)");
+                                            }}>
+                                                Windows (DeskyMode fix)
                                             </Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
