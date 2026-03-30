@@ -10,7 +10,7 @@ To install the FoxyFace program, follow these steps in order:
 ```bash
 python3 --version
 ```
-The Python version should be 3.12, if it is not, google how to install that version. It may work with older versions as well, but the author of the article has not tested it.<br/><br/>
+The Python version should be 3.12, 3.13, or 3.14. If it is not, google how to install one of these versions. It may work with older versions as well, but the author of the article has not tested it.<br/><br/>
 
 ```bash
 git clone --recurse-submodules https://github.com/Jeka8833/FoxyFace.git
