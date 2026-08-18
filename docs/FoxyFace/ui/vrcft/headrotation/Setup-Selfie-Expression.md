@@ -39,7 +39,7 @@ can set the same physical camera for both FoxyFace and Selfie Expression without
    app.
 2. Close VRChat and FoxyFace app.
 3. Add your physical webcam to the scene in OBS; the instructions on how to do this
-   are [here](https://www.youtube.com/watch?v=a_qugtLsuL0). If you are using your phone as a webcam, then use the
+   are [here](https://www.youtube.com/watch?v=fj-ZWr37wFU). If you are using your phone as a webcam, then use the
    instructions [here](/FoxyFace/connection/Connect-DroidCam.md).
 4. Click on the Start Virtual Camera button, [here](https://obsproject.com/kb/virtual-camera-guide) are instructions on
    how to do it.
@@ -49,11 +49,12 @@ can set the same physical camera for both FoxyFace and Selfie Expression without
    button.<br />![ChangeCameraVRChat](/images/FoxyFace/vrcft/ChangeCameraVRChat.png)<br /><br />
 8. Check the box next to OBS Virtual
    Camera.<br />![SelectOBSVRChat](/images/FoxyFace/vrcft/SelectOBSVRChat.png)<br /><br />
-9. Start FoxyFace
+9. Disable Eye Look/Lid Tracking: ![DisableEyes](/images/FoxyFace/vrcft/DisableEyes.png)<br /><br />
+10. Start FoxyFace
    app.<br />![FoxyFaceMainScreen](/images/FoxyFace/install-update-uninstall/install/FoxyFaceMainScreen.png)<br /><br />
-10. Open the camera settings in
+11. Open the camera settings in
     FoxyFace.<br />![OpenCameraSettings](/images/FoxyFace/camera/settings/OpenCameraSettings.png)<br /><br />
-11. Hardest part. Select OBS Virtual Camera in FoxyFace.
+12. Hardest part. Select OBS Virtual Camera in FoxyFace.
 
 > To do this, check if the image from OBS matches
 > the [Camera Preview](/FoxyFace/ui/camera/Camera-Settings.md#open-camera-preview-when-you-set-up-the-camera) in
@@ -63,5 +64,5 @@ can set the same physical camera for both FoxyFace and Selfie Expression without
 > the image from OBS matches the Camera Preview in FoxyFace. The camera count in Camera ID starts from
 > 0.<br />![FoxyFaceCameraID](/images/FoxyFace/vrcft/FoxyFaceCameraID.png)<br /><br />
 
-12. Next, customize the parameters you want to track by disabling the unnecessary ones in the avatar, FoxyFace, or
+13. Next, customize the parameters you want to track by disabling the unnecessary ones in the avatar, FoxyFace, or
     Selfie Expression settings.
