@@ -28,8 +28,7 @@ import NavbarColorModeToggle from "@theme/Navbar/ColorModeToggle";
 import {registerListener} from "../util/DocusaurusBootstrapThemeSync";
 
 const VRCFT_WINDOWS_LINK = "https://store.steampowered.com/app/3329480/VRCFaceTracking/";
-const VRCFT_MAC_LINUX_LINK = "https://github.com/dfgHiatus/VRCFaceTracking.Avalonia/releases/tag/v1.1.0.0";
-const VRCFT_DESKYMODE_LINK = "https://download.foxyface.jeka8833.pp.ua/VRCFaceTracking.zip";
+const VRCFT_MAC_LINUX_LINK = "/docs/FirstSetup/Install-VRCFaceTracking-Avalonia";
 
 const FOXYFACE_WINDOWS_LINK = "/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace-Windows";
 const FOXYFACE_MAC_LINK = "/docs/FoxyFace/install-update-uninstall/install/Install-FoxyFace-macOS";
@@ -37,7 +36,7 @@ const FOXYFACE_LINUX_LINK = "/docs/FoxyFace/install-update-uninstall/install/Ins
 
 export default function Home(): ReactNode {
     const {siteConfig} = useDocusaurusContext();
-    const imageUrl = (path) => useBaseUrl(path);
+    const imageUrl = (path: string): string => useBaseUrl(path);
 
     registerListener();
 
@@ -125,6 +124,11 @@ export default function Home(): ReactNode {
                                href="https://github.com/Jeka8833/FoxyFace" rel="noopener noreferrer nofollow"
                                target="_blank">
                                 GitHub
+                            </a>
+                            <a className="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover fw-bold py-1 px-2"
+                               href="https://pypi.org/project/foxyface" rel="noopener noreferrer nofollow"
+                               target="_blank">
+                                PyPi
                             </a>
                         </div>
                         <Nav className="justify-content-center float-md-end pt-3">
@@ -224,13 +228,6 @@ export default function Home(): ReactNode {
                                                 setVrcftOS("Linux");
                                             }}>
                                                 Linux
-                                            </Dropdown.Item>
-                                            <Dropdown.Divider/>
-                                            <Dropdown.Item onClick={() => {
-                                                setVrcftLink(VRCFT_DESKYMODE_LINK);
-                                                setVrcftOS("Windows (DeskyMode fix)");
-                                            }}>
-                                                Windows (DeskyMode fix)
                                             </Dropdown.Item>
                                         </Dropdown.Menu>
                                     </Dropdown>
@@ -427,7 +424,7 @@ export default function Home(): ReactNode {
 
             <Container as="footer" fluid="xxl" className="flex-grow-0 flex-shrink-1 border-top">
                 <div className="py-1 m-1 d-flex align-items-center flex-column flex-sm-row justify-content-between">
-                    <p className="m-0">Created by: Jeka8833, 2025 year</p>
+                    <p className="m-0">Created by: Jeka8833, 2025 - 2026 year</p>
                     <a aria-label="Jeka8833's GitHub profile page" className="link-secondary fs-4"
                        href="https://github.com/Jeka8833" rel="noopener noreferrer nofollow" target="_blank">
                         <i className="bi bi-github"></i>

@@ -4,89 +4,105 @@ title: Install FoxyFace Linux
 
 # Install FoxyFace Linux
 
-Compiling on Linux is not a thankless task, so you'll have to work in the terminal. The whole idea is to install libraries and run a Python application, if you know simple methods on how to do that, I won't restrict you.
+Installing on Linux is done through the terminal using Python and PyPI (`pip`).
 
-To install the FoxyFace program, follow these steps in order:
+### 1. Check Python Version
+
+Ensure you have a supported Python version:
 ```bash
 python3 --version
 ```
-The Python version should be 3.12, 3.13, or 3.14. If it is not, google how to install one of these versions. It may work with older versions as well, but the author of the article has not tested it.<br/><br/>
+The Python version should be 3.12, 3.13, or 3.14.
 
-```bash
-git clone --recurse-submodules https://github.com/Jeka8833/FoxyFace.git
-```
-```bash
-cd FoxyFace/FoxyFace
-```
-```bash
-python3 -m venv venv
-```
-```bash
-source venv/bin/activate
-```
-```bash
-pip install -r requirements.txt
-```
+:::danger[Important for AMD users]
 
-Now you need to find out what video card you have:
-<details>
-  <summary>Nvidia (Example for CUDA > 12.6 and cuDNN > 8)</summary>
-
-  Here is an example for CUDA version 12.6 and newer:
-  ```bash
-  pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
-  ```
-  ```bash
-  pip install onnxruntime-gpu
-  ```
-</details>
-
-<details>
-  <summary>AMD</summary>
-
-  You need to find out the version of your ROCm and then change the numbers in the link; a list of available versions can be found [here](https://repo.radeon.com/rocm/manylinux/). Here's the command for ROCm version 6.4.3:
-  ```bash
-  pip install onnxruntime-rocm -f https://repo.radeon.com/rocm/manylinux/rocm-rel-6.4.3/
-  ```
-</details>
-
-<details>
-  <summary>No GPU or Intel</summary>
-
-  In this case, you don't have many options; all calculations will be performed on the CPU. Here is the command that you need to execute:
-  ```bash
-  pip install onnxruntime
-  ```
-</details>
-
-```bash
-python Main.py
-```
-
-<br/><br/>
-
-:::info
-
-If the installation was successful, don't forget to follow these steps:
-1. Install [VRCFaceTracking Avalonia](https://github.com/dfgHiatus/VRCFaceTracking.Avalonia/releases/tag/v1.1.0.0). The official Steam version of VRCFaceTracking will **NOT** run on Linux or MacOS!
-2. Install the Interface Module: Follow the guide for the [FoxyFaceVRCFTInterface](/FoxyFaceVRCFTInterface/install-update-uninstall/install/Install-Module.md).
+If you plan to use an AMD GPU (ROCm), you **must use Python 3.12**.
 
 :::
 
 <br/>
 
-## An error occurred during installation
+### 2. Create and Activate a Virtual Environment
 
-This is most likely to happen because your system does not have the necessary libraries. See what is missing in your system and install it.
+:::tip
 
-<br/>
+Don't forget to create a separate folder for FoxyFace
 
-## For the gods of Arch Linux
-
-It's possible that FoxyFace doesn't install on Arch Linux, the reason is currently unknown, but some solution was found by one very good person. You can read about it [here](https://github.com/Jeka8833/FoxyFace/issues/6).
+:::
 
 <br/>
 
-## The program does not start
+It is strongly recommended to install FoxyFace inside an isolated virtual environment:
 
-The program should have created a file "latest.log", this file will be needed when you want to report a bug on GitHub Issues or Discord \#Jeka8833. 
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+<br/>
+
+### 3. Install FoxyFace
+
+Now you need to find out what video card you have:
+
+<details open>
+  <summary><b>NVIDIA</b></summary>
+
+For NVIDIA GPUs with CUDA support:
+  ```bash
+  pip install "foxyface[nvidia]" --extra-index-url https://download.pytorch.org/whl/cu126
+  ```
+</details>
+
+<details>
+  <summary><b>AMD (ROCm)</b></summary>
+
+> ⚠️ You **must use Python 3.12**. Newer versions of Python are currently not supported.
+  ```bash
+  pip install "foxyface[rocm]" --extra-index-url https://repo.radeon.com/rocm/manylinux/rocm-rel-6.4.4/
+  ```
+</details>
+
+<details>
+  <summary><b>CPU only / Intel / Other</b></summary>
+
+All calculations will be performed on the CPU:
+  ```bash
+  pip install "foxyface[cpu]"
+  ```
+</details>
+
+### 4. Run the Application
+
+Once the installation is complete, the easiest and recommended way to start the program is:
+
+```bash
+venv/bin/foxyface
+```
+
+> 💡 **Why launch it this way?**  
+> When you close your terminal or open a new one later, the virtual environment will no longer be active. Running `venv/bin/foxyface` directly calls the program inside your virtual environment without forcing you to run `source venv/bin/activate` every time.  
+> 
+> *(If you already have your virtual environment activated in the current terminal, simply typing `foxyface` will also work).*
+
+<br/>
+<br/>
+
+
+:::info[Don't forget to install the special version of VRCFaceTracking]
+
+You can find complete instructions on how to do this on the **[“Installing VRCFaceTracking on Linux or macOS” (Click here)](/docs/FirstSetup/Install-VRCFaceTracking-Avalonia)** page.
+
+:::
+
+<br/>
+
+### An error occurred during installation
+
+This is most likely to happen because your system does not have the necessary build tools or system libraries. Check the terminal output to see what dependencies are missing in your distribution.
+
+<br/>
+
+### The program does not start
+
+The program should have created a file `latest.log` in the current working directory. This file will be needed when you want to report a bug on GitHub Issues or Discord #Jeka8833.

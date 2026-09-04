@@ -49,6 +49,11 @@ const sidebars: SidebarsConfig = {
                 },
                 {
                     type: 'doc',
+                    label: 'Installing VRCFaceTracking on Linux/MacOS',
+                    id: 'FirstSetup/Install-VRCFaceTracking-Avalonia'
+                },
+                {
+                    type: 'doc',
                     label: 'Update Project Babble',
                     id: 'FoxyFace/ui/babble/Update-Babble-Model'
                 },
